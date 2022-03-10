@@ -44,7 +44,7 @@ while(True):
                 (0, 255, 255), 
                 2, 
                 cv2.LINE_4)
-            cv2.imshow('video', frame)
+      
             print('Violance detacted here ...')
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
             vio = cv2.VideoWriter("./videos/output-"+str(j)+".avi", fourcc, 10.0, (fwidth,fheight))
@@ -68,9 +68,6 @@ while(True):
         frames[i][:] = frm
         
         i+=1
-    
-    cv2.imshow('video', frame)
-  
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
